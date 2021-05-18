@@ -26,6 +26,7 @@ Boston, MA 02111-1307, USA.  */
 #else
 
 #ifdef STDC_HEADERS
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #else
@@ -48,7 +49,7 @@ char *realloc ();
 static void
 memory_out ()
 {
-  write (2, "virtual memory exhausted\n", 25);
+  fprintf (stderr, "virtual memory exhausted\n");
   exit (1);
 }
 
